@@ -1,0 +1,176 @@
+{%extends 'emp_base.html' %}
+{%block body%}
+
+
+        <div class="row mt-5 " >
+            <div class="col-md-8">
+                            <h3 class="font-weight-bold">Add Personal Details</h3>
+
+
+            </div>
+
+        </div>
+<div class="row mb-5">
+
+
+
+        <div class="col-md-9 form-wrap" >
+            <form method="post" role="form" data-toggle="validator">
+                <div class="form-group row">
+                     <div class="col-sm-4">
+                         <label>Employee ID</label></div>
+                                         <div class="col-sm-8">
+
+    <input type="text" class="form-control"
+           readonly
+           name="emp_id" id="emp_id" value="{{login_details.EMP_ID}}">
+                                         </div>
+  </div>
+                <div class="form-group row">
+                     <div class="col-sm-4">
+    <label>First Name</label>
+                     </div>
+                     <div class="col-sm-8">
+    <input type="text" name="first_name" id="first_name" class="form-control"
+           placeholder="Enter First Name"
+    value="{{login_details.FIRST_NAME}}"
+    >
+                     </div>
+  </div>
+                <div class="form-group row">
+                     <div class="col-sm-4">
+    <label>Last Name</label>
+                     </div>
+                      <div class="col-sm-8">
+
+    <input type="text" name="last_name" id="last_name" class="form-control"
+           value="{{login_details.LAST_NAME}}"
+           placeholder="Enter Last Name">
+                      </div>
+  </div>
+                <div class="form-group row">
+                     <div class="col-sm-4">
+    <label>Email address</label>
+                    </div>
+                                        <div class="col-sm-8">
+
+    <input type="email" name="email" id="email" class="form-control"
+           value="{{login_details.EMAIL}}"
+           placeholder="Enter Email">
+                                        </div>
+  </div>
+
+                <div class="form-group row">
+
+                     <div class="col-sm-4">
+    <label>Role</label>
+                    </div>
+                                        <div class="col-sm-8">
+    <input type="text" class="form-control" name="role"  readonly  id="role" value="{{login_details.ROLE}}">
+                                        </div>
+
+  </div>
+
+                <div class="form-group row">
+                     <div class="col-sm-4">
+    <label>Contact Number</label>
+                    </div>
+                    <div class="col-sm-8">
+
+                        <input type="text" name="contact_no" id="contact_no" class="form-control"
+           value="{{emp_personal_details.CONTACT_NO}}"
+           placeholder="Enter Current address">
+                        </div>
+
+
+
+  </div>
+
+                <div class="form-group row">
+                    <div class="col-sm-4">
+    <label>Current address</label>
+                    </div>
+                    <div class="col-sm-8">
+
+                            <input type="text" name="Current_address" id="Current_address" class="form-control"
+           value="{{emp_personal_details.CURRENT_ADDRESS}}"
+           placeholder="Enter Current address">
+
+                    </div>
+
+  </div>
+
+                <div class="form-group row">
+                    <div class="col-sm-4">
+    <label>Current City</label>
+                    </div>
+                    <div class="col-sm-8">
+    <input type="text" name="Current_city" id="Current_city" class="form-control"
+           value="{{emp_personal_details.CURRENT_CITY}}"
+           placeholder="Enter Current address"></div>
+  </div>
+
+                <div class="form-group row">
+                    <div class="col-sm-4">
+                        <label>Current State</label></div>
+                    <div class="col-sm-8">
+    <input type="text" name="Current_state" id="Current_state" class="form-control"
+           value="{{emp_personal_details.CURRENT_STATE}}"
+           placeholder="Enter Current State">
+                    </div>
+  </div>
+
+                <div class="form-group row">
+                    <div class="col-sm-4">
+    <label>Current Pincode</label>
+                    </div>
+                    <div class="col-sm-8">
+    <input type="text" name="Current_pincode" id="Current_pincode" class="form-control"
+           value="{{emp_personal_details.CURRENT_PINCODE}}"
+           placeholder="Enter Current Pincode"></div>
+  </div>
+                <div class="form-group row">
+                    <div class="col-sm-4">
+
+                          <label class="form-label">Adhaar Number</label>
+                    </div>
+                    <div class="col-sm-8">
+
+                          <input type="text" name="Adhaar_Number" id="Adhaar_Number" class="form-control"
+           value="{{emp_personal_details.ADHAAR_NUMBER}}"
+           placeholder="Enter Current address">
+                    </div>
+
+
+  </div>
+                <div class="form-group row">
+                    <div class="col-sm-4">
+
+                          <label class="form-label">PAN Number</label>
+                    </div>
+                    <div class="col-sm-8">
+
+                          <input type="text" name="pan_Number" id="pan_Number" class="form-control"
+           value="{{emp_personal_details.PAN_NUMBER}}"
+           placeholder="Enter Current address">
+                    </div>
+
+
+  </div>
+
+
+
+                <input class="btn btn-primary" type="submit" value="Submit">
+
+
+
+</form>
+        </div>
+    </div>
+
+
+
+
+
+
+{%endblock%}

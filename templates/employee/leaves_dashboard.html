@@ -1,0 +1,60 @@
+{%extends 'emp_base.html' %}
+{%block body%}
+
+
+
+<div class="container">
+        <div class="row">
+            <div class="col-md-12 heading_top">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <h3>Leaves Dashboard</h3>
+                    </div>
+
+
+                </div>
+
+            </div>
+                    <div class="col-sm-12 mt-5">
+                        <a class="btn btn-primary pull-right" type="button" href="/Apply_Leave">Apply</a>
+                    </div>
+
+
+
+            <div class="col-md-12 ">
+                <table class="table mt-5">
+                    <thead>
+                    <tr>
+                        <th>Applied on</th>
+                        <th>Applied Dates</th>
+                        <th>No. of Days</th>
+                        <th>Reasons</th>
+                        <th>Status</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {%for i in leaves_application%}
+                    <tr>
+                        <td>{%if i.APPLIED_ON%}{{i.APPLIED_ON}}{%else%}-{%endif%}</td>
+                        <td>{%if i.APPLIED_DATE%}{{i.APPLIED_DATE}}{%else%}-{%endif%}</td>
+                        <td>{%if i.APPLIED_DAYS%}{{i.APPLIED_DAYS}}{%else%}-{%endif%}</td>
+                        <td>{%if i.REASON%}{{i.REASON}}{%else%}-{%endif%}</td>
+                        <td>{%if i.STATUS%}{{i.STATUS}}{%else%}-{%endif%}</td>
+
+                    </tr>
+                    {%endfor%}
+                    </tbody>
+
+                </table>
+            </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+{%endblock%}

@@ -1,0 +1,78 @@
+{%extends 'emp_base.html' %}
+{%block body%}
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+
+        <div class="row mt-5 " >
+            <div class="col-md-8">
+                            <h3 class="font-weight-bold">Apply For Leave</h3>
+
+
+            </div>
+
+        </div>
+<div class="row mb-5">
+
+
+
+        <div class="col-md-9 form-wrap" >
+            <form method="post" role="form" data-toggle="validator">
+                <div class="form-group row">
+                     <div class="col-sm-4">
+                         <label>Employee ID</label></div>
+                                         <div class="col-sm-8">
+
+    <input type="text" class="form-control"
+           readonly
+           name="emp_id" id="emp_id" value="{{session['USER_ID']}}">
+                                         </div>
+  </div>
+                <div class="form-group row">
+
+                     <div class="col-sm-4">
+    <label>Role</label>
+                    </div>
+                                        <div class="col-sm-8">
+    <input type="text" class="form-control" name="role"  readonly  id="role" value="{{session['ROLE']}}">
+                                        </div>
+
+  </div>
+                <div class="form-group row">
+
+                     <div class="col-sm-4">
+    <label>Select Dates</label>
+                    </div>
+                                        <div class="col-sm-8">
+<input type="text" id="datepicker" name="applied_dates" class="form-control"/>
+                                        </div>
+
+  </div>
+                <div class="form-group row">
+
+                     <div class="col-sm-4">
+    <label>Reason</label>
+                    </div>
+                                        <div class="col-sm-8">
+                                            <textarea id="reason" class="form-control" name="reason"></textarea>
+                                        </div>
+
+  </div>
+
+
+
+
+
+                <input class="btn btn-primary" type="submit" value="Submit">
+
+
+
+</form>
+        </div>
+    </div>
+
+
+
+
+<!--<script src="http://code.jquery.com/jquery-1.9.1.js"></script>-->
+
+{%endblock%}

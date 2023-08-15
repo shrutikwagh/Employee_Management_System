@@ -1,0 +1,46 @@
+{%extends 'base.html' %}
+{%block body%}
+
+
+
+
+        <div class=" card">
+<div class="card-body">
+    <div class="row">
+        <div class="col-md-6 col-sm-6 col-xs-6 ">
+                                <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="...">
+            </div>
+                <div class="col-md-6 col-sm-6 col-xs-6 " >
+                    <div class="col-md-10 col-xs-12 border mt-3 bg-info rounded">
+                        <div class="mx-3 my-3">
+                        <h3 class="form-label font-weight-bold text-capitalize">{{emp_personal_details1.FIRST_NAME}} {{emp_personal_details1.LAST_NAME}} </h3>
+                                    <span class="text-light text-capitalize">{{emp_personal_details1.ROLE}}</span>
+
+                        </div>
+                    </div>
+                    <div class="mt-3">
+                            <ul class="list-unstyled">
+                                    <li class="mb-2 mb-xl-3 text-capitalize"><span class="font-weight-bold">Address:</span> {{emp_personal_details1.CURRENT_ADDRESS}}  {{emp_personal_details1.CURRENT_CITY}}  {{emp_personal_details1.CURRENT_STATE}}  {{emp_personal_details1.CURRENT_PINCODE}}</li>
+                                    <li class="mb-2 mb-xl-3 text-capitalize"><span class="font-weight-bold">Email:</span> {{emp_personal_details1.EMAIL}}</li>
+                                    <li class="mb-2 mb-xl-3 text-capitalize"><span class="font-weight-bold">DOB:</span> {{emp_personal_details1.EMP_DOB}}</li>
+                                    <li class="text-capitalize"><span class=" font-weight-bold">Contact:</span> {{emp_personal_details1.CONTACT_NO}}</li>
+                                </ul>
+
+
+                    </div>
+
+                </div>
+    </div>
+
+
+        </div>
+
+
+
+        </div>
+
+
+
+
+
+{%endblock%}

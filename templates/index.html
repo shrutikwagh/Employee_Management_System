@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="shortcut icon" href="#">
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./static/css/styles.css" />
+  </head>
+  <body>
+  <div id="main_div">
+<aside class="sidebar">
+      <div class="sidebar-inner">
+        <header class="sidebar-header">
+          <button
+            type="button"
+            class="sidebar-burger"
+            onclick="toggleSidebar()"
+          ></button>
+          <img src="./static/assets/blocklord-logo.png" class="sidebar-logo" />
+        </header>
+        <nav class="sidebar-nav">
+          <a href="/homepage">
+             <button type="button">
+            <img src="./static/assets/icon-home.svg" />
+            <span>Home</span>
+          </button>
+          </a>
+          <a href="/index">
+             <button type="button">
+            <img src="./static/assets/login-icon.png" />
+            <span>Login</span>
+          </button>
+          </a>
+
+          <button type="button">
+            <img src="./static/assets/icon-settings.svg" />
+            <span style="animation-delay: 0.1s">Settings</span>
+          </button>
+          <button type="button">
+            <img src="./static/assets/icon-levels.svg" />
+            <span style="animation-delay: 0.2s">Levels</span>
+          </button>
+          <button type="button">
+            <img src="./static/assets/icon-accounts.svg" />
+            <span style="animation-delay: 0.3s">Accounts</span>
+          </button>
+        </nav>
+        <footer class="sidebar-footer">
+          <a href="/logout">
+             <button type="button">
+            <img src="./static/assets/icon-lock.svg" />
+            <span>Logout</span>
+          </button>
+          </a>
+
+        </footer>
+      </div>
+
+    </aside>
+
+  </div>   <div class="container">
+      {% block body %}{% endblock %}
+    </div>
+
+
+
+
+
+
+
+
+
+  </body>
+
+
+<script type="text/javascript">
+      const toggleSidebar = () => document.getElementById("main_div").classList.toggle("open");
+
+
+
+    </script>
+</html>

@@ -1,0 +1,111 @@
+{%extends 'base.html' %}
+{%block body%}
+
+
+
+
+
+        <div class="row mt-5 " >
+            <div class="col-md-12">
+                            <h3 class="heading_top">Add Employees</h3>
+
+
+            </div>
+
+        </div>
+<div class="row mb-5">
+
+
+
+        <div class="col-md-8 col-sm-6 border border-light" >
+            <form method="post" role="form">
+  <div class="form-group row">
+      <div class="col-sm-4">
+              <label>Employee ID</label>
+
+      </div>
+      <div class="col-sm-6">
+              <input type="text" class="form-control"
+           readonly
+           name="emp_id" id="emp_id" value="{{emp_id}}" placeholder="name@example.com">
+      </div>
+
+  </div>
+                <div class="form-group row">
+                    <div class="col-sm-4">
+                        <label>First Name</label></div>
+              <div class="col-sm-6">
+    <input type="text" name="first_name" id="first_name" class="form-control" placeholder="Enter First Name">
+  </div>
+                    </div>
+                <div class="form-group row">
+                      <div class="col-sm-4">
+    <label>Last Name</label>
+                      </div>
+                    <div class="col-sm-6">
+    <input type="text" name="last_name" id="last_name" class="form-control" placeholder="Enter Last Name">
+                    </div>
+  </div>
+                <div class="form-group row">
+                 <div class="col-sm-4">
+                     <label>Email address</label></div>
+                 <div class="col-sm-6">
+    <input type="email" name="email" id="email" class="form-control" placeholder="Enter Email">
+                 </div>
+            </div>
+
+                <div class="form-group row">
+                    <div class="col-sm-4">
+    <label>Password</label>
+                    </div>
+                     <div class="col-sm-6">
+    <input type="text" name="Password" id="password" class="form-control" placeholder="Enter Password">
+                     </div>
+                </div>
+
+  <div class="form-group row">
+      <div class="col-sm-4">
+    <label >Role</label>
+          </div>
+      <div class="col-sm-6">
+    <select class="form-control" name="role" id="role">
+      <option value="">Select</option>
+      <option value="Software Developer">Software Developer</option>
+      <option value="Manager">Manager</option>
+      <option  value="Project Manager">Project Manager</option>
+      <option value="Intern">Intern</option>
+      <option value="Sales Executive">Sales Executive</option>
+    </select>
+  </div>
+  </div>
+
+
+                <div class="form-group row">
+                     <div class="col-sm-4">
+
+                         <label>Salary</label></div>
+                    <div class="col-sm-6">
+    <input type="text" name="Salary" id="Salary" class="form-control" placeholder="Enter Salary" required>
+  </div>
+                </div>
+                <div class="form-group row">
+                      <div class="col-sm-4">
+                          <label>Joining Date</label></div>
+               <div class="col-sm-6">
+    <input type="date" name="Joining_Date" id="Joining_Date" class="form-control" placeholder="Enter Salary">
+  </div></div>
+
+                <button type="submit" class="button_common" type="submit" value="Submit">Submit</button>
+
+
+
+</form>
+        </div>
+    </div>
+
+
+
+
+
+
+{%endblock%}

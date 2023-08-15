@@ -1,0 +1,111 @@
+{%extends "base.html" %}
+{%block body%}
+
+
+
+
+
+        <div class="row mt-5 " >
+            <div class="col-md-12">
+                            <h3 class="heading_top">Generate Salary Slip</h3>
+
+
+            </div>
+
+        </div>
+<div class="row mb-5">
+
+
+
+        <div class="col-md-8 col-sm-6 border border-light" >
+            <form method="post" role="form" id="salary_slip_form">
+  <div class="form-group row">
+      <div class="col-sm-4">
+              <label>Employee ID</label>
+
+      </div>
+      <div class="col-sm-6">
+              <input type="text" class="form-control"
+           readonly
+           name="emp_id" id="emp_id" value="{{emp_id}}" placeholder="name@example.com">
+      </div>
+
+  </div>
+                <div class="form-group row">
+                    <div class="col-sm-4">
+                        <label>Name</label></div>
+              <div class="col-sm-6">
+    <input type="text" name="first_name" id="first_name" class="form-control" placeholder="Enter First Name"
+    value="{{user_name}}" readonly
+    >
+  </div>
+                    </div>
+                <div class="form-group row">
+                    <div class="col-sm-4">
+                        <label>Role</label></div>
+              <div class="col-sm-6">
+    <input type="text" name="role" id="role" class="form-control" placeholder="Enter First Name"
+    value="{{emp_personal_details1.ROLE}}" readonly
+    >
+  </div>
+                    </div>
+                <div class="form-group row">
+                    <div class="col-sm-4">
+                        <label>Month</label></div>
+              <div class="col-sm-6">
+    <select class="form-control" name="month" id="month">
+
+        <option value="">Select Month</option>
+        {%for i in month_list %}
+        <option value="{{i}}">{{i}}</option>
+
+
+        {%endfor%}
+
+
+    </select>
+  </div>
+                    </div>
+                <div class="form-group row">
+                    <div class="col-sm-4">
+                        <label>Salary</label></div>
+              <div class="col-sm-6">
+    <input type="text" class="form-control" name="Salary"
+           readonly
+           id="Salary" value="{{emp_personal_details1.SALARY_MONTHLY}}">
+
+
+  </div>
+                    </div>
+                <div class="form-group row">
+                    <div class="col-sm-4">
+                        <label>Generte Salary Statement</label></div>
+              <div class="col-sm-6">
+   <a href="#" type="button" id="generate_salary_statement_btn" >Generate</a>
+  </div>
+                    </div>
+
+
+
+
+
+
+
+
+                <button class="button_common" type="submit" value="Submit">Submit</button>
+
+
+
+</form>
+        </div>
+    </div>
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="{{ url_for('static', filename='js/generate_salary_slip.js') }}"></script>
+
+{%endblock%}

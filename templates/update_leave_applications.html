@@ -1,0 +1,97 @@
+{%extends "base.html" %}
+{%block body%}
+
+
+
+
+
+        <div class="row mt-5 " >
+            <div class="col-md-12">
+                            <h3 class="heading_top">Update Leave Status</h3>
+
+
+            </div>
+
+        </div>
+<div class="row mb-5">
+
+
+
+        <div class="col-md-8 col-sm-6 border border-light" >
+            <form method="post" role="form">
+  <div class="form-group row">
+      <div class="col-sm-4">
+              <label>Employee ID</label>
+
+      </div>
+      <div class="col-sm-6">
+              <input type="text" class="form-control"
+           readonly
+           name="emp_id" id="emp_id" value="{{emp_id}}" placeholder="name@example.com">
+      </div>
+
+  </div>
+                <div class="form-group row">
+                    <div class="col-sm-4">
+                        <label>Name</label></div>
+              <div class="col-sm-6">
+    <input type="text" name="first_name" id="first_name" class="form-control" placeholder="Enter First Name"
+    value="{{user_name}}" readonly
+    >
+  </div>
+                    </div>
+
+
+
+
+                <div class="form-group row">
+                     <div class="col-sm-4">
+
+                         <label>Applied Dates</label></div>
+                    <div class="col-sm-6">
+    <input type="text" name="Applied_Dates" id="Applied_Dates" class="form-control"
+    value="{{leaves_application.APPLIED_DATE}}" readonly
+    >
+  </div>
+                </div>
+                <div class="form-group row">
+                     <div class="col-sm-4">
+
+                         <label>Reason</label></div>
+                    <div class="col-sm-6">
+    <input type="text" name="Reason" id="Reason" class="form-control"
+    value="{{leaves_application.REASON}}" readonly
+    >
+  </div>
+                </div>
+                <div class="form-group row">
+                     <div class="col-sm-4">
+
+                         <label>Status</label></div>
+                    <div class="col-sm-6">
+    <select  name="Status" id="Status" class="form-control">
+        <option value="">Select</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+    </select>
+
+  </div>
+                </div>
+
+
+
+
+                <button class="button_common" type="submit" value="Submit">Submit</button>
+
+
+
+</form>
+        </div>
+    </div>
+
+
+
+
+
+
+{%endblock%}

@@ -1,0 +1,122 @@
+{%extends 'emp_base.html' %}
+{%block body%}
+
+
+
+<div class="">
+
+    <div class="row">
+        <div class="col-md-8">
+            <h3 class="heading_top">
+                Employee Details
+
+            </h3>
+
+
+        </div>
+    </div>
+<div class="form-group row mt-5">
+                <div class="col-sm-5">
+                    <label class="form-label font-weight-bold">Personal Details</label>
+                    <a href="#" class="">
+                         <img src="./static/assets/pencil.svg" class=""/>
+                    </a>
+
+
+                </div>
+
+            </div>
+
+    <div class="row">
+         <div class="col-md-6">
+            <div class="form-group row">
+                <div class="col-sm-5">
+                    <label class="form-label">First Name</label>
+                </div>
+                <div class="col-sm-5">
+                    <label class="form-label">{{emp_personal_details1.FIRST_NAME}}</label>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-5">
+                    <label class="form-label">Last Name</label>
+                </div>
+                <div class="col-sm-5">
+                    <label class="form-label">{{emp_personal_details1.LAST_NAME}}</label>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-5">
+                    <label class="form-label">Role</label>
+                </div>
+                <div class="col-sm-5">
+                    <label class="form-label">{{emp_personal_details1.ROLE}}</label>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-5">
+                    <label class="form-label">Contact No</label>
+                </div>
+                <div class="col-sm-5">
+                    <label class="form-label">{{emp_personal_details1.CONTACT_NO}}</label>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-5">
+                    <label class="form-label">Current State</label>
+                </div>
+                <div class="col-sm-5">
+                    <label class="form-label">{{emp_personal_details1.CURRENT_STATE}}</label>
+                </div>
+            </div>
+
+
+            </div>
+
+
+            <div class="col-md-6">
+
+
+            <div class="form-group row">
+                <div class="col-sm-5">
+                    <label class="form-label">Current City</label>
+                </div>
+                <div class="col-sm-5">
+                    <label class="form-label">{{emp_personal_details1.CURRENT_CITY}}</label>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-5">
+                    <label class="form-label">Current Pincode</label>
+                </div>
+                <div class="col-sm-5">
+                    <label class="form-label">{{emp_personal_details1.CURRENT_PINCODE}}</label>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-5">
+                    <label class="form-label">Adhaar Number</label>
+                </div>
+                <div class="col-sm-5">
+                    <label class="form-label">{{emp_personal_details1.ADHAAR_NUMBER}}</label>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-5">
+                    <label class="form-label">PAN Number</label>
+                </div>
+                <div class="col-sm-5">
+                    <label class="form-label">{{emp_personal_details1.PAN_NUMBER}}</label>
+                </div>
+            </div>
+
+            </div>
+    </div>
+</div>
+
+
+
+
+{%endblock%}
+
+

@@ -1,0 +1,66 @@
+{%extends 'base.html' %}
+{%block body%}
+
+<div class="">
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="heading_top">
+                All Employees
+            </h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Employee Id</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Email</th>
+      <th scope="col">Role</th>
+      <th scope="col">Salary</th>
+      <th scope="col">View Offer Letter</th>
+      <th scope="col">View Details</th>
+<!--      <th scope="col">Salary Slip</th>-->
+    </tr>
+  </thead>
+  <tbody>
+  {%for i in login_details%}
+    <tr>
+      <th scope="row">{{i.EMP_ID}}</th>
+      <td>{{i.FIRST_NAME}}</td>
+      <td>{{i.LAST_NAME}}</td>
+      <td>{{i.EMAIL}}</td>
+      <td>{{i.ROLE}}</td>
+      <td>{{i.SALARY_MONTHLY}}</td>
+      <td>
+          <a target="_blank" href="{{i.url}}"><i class="fa fa-eye"></i></a>
+      </td>
+        <td>
+          <a target="_blank" href="/View_Employee_Details/{{i.EMP_ID}}"><i class="fa fa-eye"></i></a>
+      </td>
+        <!--
+        <td>
+          <a target="_blank" href="/Salary_Dashboard_Admin/{{i.EMP_ID}}">Generate</a>
+      </td>
+        -->
+    </tr>
+   {%endfor%}
+  </tbody>
+</table>
+
+
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+{%endblock%}
+
+

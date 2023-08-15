@@ -1,0 +1,50 @@
+{%extends 'base.html' %}
+{%block body%}
+
+<div class="">
+
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="heading_top">
+                Salary Statements
+            </h3>
+
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-12">
+
+<table class="table table-hover mt-5">
+                    <thead>
+                    <tr>
+                        <th>Created Date</th>
+                        <th>Month - Year</th>
+                        <th>Salary</th>
+                        <th>Status</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {%for i in leaves_application%}
+                    <tr>
+                        <td>{%if i.CREATED_DATE%}{{i.CREATED_DATE}}{%else%}{%endif%}</td>
+                        <td>{%if i.SALARY%}{{i.SALARY}}{%else%}-{%endif%}</td>
+                        <td>{%if i.APPLIED_ON%}{{i.APPLIED_ON}}{%else%}-{%endif%}</td>
+                        <td>{%if i.APPLIED_DATE%}{{i.APPLIED_DATE}}{%else%}-{%endif%}</td>
+                        <td>{%if i.APPLIED_DAYS%}{{i.APPLIED_DAYS}}{%else%}-{%endif%}</td>
+                        <td>{%if i.REASON%}{{i.REASON}}{%else%}-{%endif%}</td>
+                        <td>
+                            <a href="/Update_Leave_Applications/{{i.EMP_ID}}/{{i.ID}}"><i class="fa fa-pencil"></i> </a>
+                            {%if i.STATUS%}{{i.STATUS}}{%else%}-{%endif%}</td>
+
+                    </tr>
+                    {%endfor%}
+                    </tbody>
+
+                </table>
+        </div>
+    </div>
+</div>
+{%endblock%}

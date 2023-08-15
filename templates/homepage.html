@@ -1,0 +1,62 @@
+{%extends 'base.html' %}
+{%block body%}
+
+
+
+<div class="">
+
+    <div class="row">
+        <div class="col-md-8">
+            <h3 class="font-text-bold">
+                All Employees
+            </h3>
+
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-12">
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Email</th>
+      <th scope="col">Role</th>
+      <th scope="col">Salary</th>
+      <th scope="col">View Offer Letter</th>
+    </tr>
+  </thead>
+  <tbody>
+  {%for i in login_details%}
+    <tr>
+      <th scope="row">{{loop.index}}</th>
+      <td>{{i.FIRST_NAME}}</td>
+      <td>{{i.LAST_NAME}}</td>
+      <td>{{i.EMAIL}}</td>
+      <td>{{i.ROLE}}</td>
+      <td>{{i.SALARY}}</td>
+      <td>
+          <a href="/View_offer_letter"><i class="fa fa-eye"></i></a>
+      </td>
+    </tr>
+   {%endfor%}
+  </tbody>
+</table>
+
+
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+{%endblock%}
+
+

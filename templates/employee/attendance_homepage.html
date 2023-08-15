@@ -1,0 +1,62 @@
+{%extends 'emp_base.html' %}
+{%block body%}
+
+
+
+<div class="container">
+        <div class="row">
+            <div class="col-md-12 heading_top">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <h3>Attendance  </h3>
+                    </div>
+
+
+                </div>
+
+            </div>
+                    <div class="col-sm-12 mt-5">
+                        <a class="btn btn-primary pull-right" type="button" href="/AttendancePage">Mark Attendance</a>
+                    </div>
+
+
+
+            <div class="col-md-12 ">
+                <table class="table mt-5">
+                    <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Month</th>
+                        <th>Total Working Days</th>
+                        <th>Present Days</th>
+                        <th>Absent Days</th>
+                        <th>Leaves Taken</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {%for i in dictt1%}
+                    <tr>
+                        <td>{%if i.YEAR%}{{i.YEAR}}{%else%}-{%endif%}</td>
+                        <td>{%if i.MONTH%}{{i.MONTH}}{%else%}-{%endif%}</td>
+                        <td>23</td>
+                        <td>{%if i.count%}{{i.count}}{%else%}-{%endif%}</td>
+                        <td>{%if i.ABSENT_DAYS%}{{i.ABSENT_DAYS}}{%else%}-{%endif%}</td>
+                        <td></td>
+
+                    </tr>
+                    {%endfor%}
+                    </tbody>
+
+                </table>
+            </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+{%endblock%}
